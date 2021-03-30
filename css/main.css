@@ -342,9 +342,9 @@ label {
     font-family: Euphorigenic;
     border: 3px solid black;
     font-size: 500%;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 50px;
-    min-padding: 10px 20px;
+    padding: 20px;
     text-align: center;
     min-width: 250px;
     max-width: 250px;
