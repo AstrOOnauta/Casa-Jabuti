@@ -336,7 +336,7 @@ label {
     border-top: solid 3px black;
     margin-left: 200px;
     margin-right: 200px;
-    min-width: 300px;
+    min-width: 250px;
 }
 .slogan h1 {
     font-family: Euphorigenic;
@@ -344,10 +344,10 @@ label {
     font-size: 500%;
     margin: 0 auto;
     margin-top: 50px;
-    padding: 10px;
+    min-padding: 10px 20px;
     text-align: center;
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 250px;
+    max-width: 250px;
 }
 .slogan h2 {
     min-width: 200px;
