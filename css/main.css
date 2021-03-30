@@ -344,7 +344,7 @@ label {
     font-size: 500%;
     margin: auto;
     margin-top: 50px;
-    padding: 20px;
+    padding: 20px 10px 20px 10px;
     text-align: center;
     min-width: 250px;
     max-width: 250px;
