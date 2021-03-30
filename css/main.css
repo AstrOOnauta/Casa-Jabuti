@@ -55,7 +55,7 @@ nav ul li {
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 8px;
-    margin-right: 50px;
+    margin-right: 45px;
     font-size: 90%;
 }
 nav ul li a:hover {
@@ -69,7 +69,7 @@ nav ul li a {
 }
 nav ul {
     padding: 0;
-    max-width: 956px;
+    max-width: 965px;
     margin: auto;
 }
 /*
@@ -269,14 +269,14 @@ button.slick-next {
 
 */
 .estimative {
-    max-width: 955px;
+    max-width: 960px;
     margin: auto;
 }
 .estimative h1 {
     padding-top: 60px;
     padding-bottom: 40px;
     margin: auto;
-    font-size: 200%;
+    font-size: 175%;
     font-family: Euphorigenic;
     font-weight: normal;
     text-align: center;
