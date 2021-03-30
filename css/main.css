@@ -302,7 +302,7 @@ input {
 select {
     margin: 10px;
 }
-.button {
+.button-estimative {
     border-radius: 0.5cm;
     margin: 10px 110px 10px 180px;
 }
