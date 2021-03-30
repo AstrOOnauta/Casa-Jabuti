@@ -12,6 +12,7 @@ body {
     background: linear-gradient(90deg, #69bd71,  #23D5AB, #23D5AB, #23A6D5);
     background-size: 400% 400%;
     width: 100%;
+    min-width: 750px;
     padding: 0;
     margin: 0;
     animation: change 15s ease-in-out infinite;
@@ -116,9 +117,9 @@ button.slick-next {
 */
 .space-underslider {
     height: 70px;
+    margin-right: 200px;
+    margin-left: 200px;
     min-width: 200px;
-    max-width: 950px;
-    margin: auto;
     border-bottom: 3px black solid;
 }
 .about {
@@ -138,12 +139,12 @@ button.slick-next {
     text-indent: 1.5cm;
     margin-left: 200px;
     margin-right: 200px;
-    min-width: 200px;
+    min-width: 300px;
 }
 .about2 {
     margin-left: 200px;
     margin-right: 200px;
-    min-width: 200px;
+    min-width: 300px;
     border-bottom: solid 3px black;
     padding-bottom: 25px;
 }
@@ -186,10 +187,12 @@ button.slick-next {
 
 */
 .banners {
-    width: 100%;
+    position: relative;
+    min-width: 300px;
+    max-width: 950px;
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
 }
 .banner-img {
     background-color:black;
@@ -269,7 +272,10 @@ button.slick-next {
 
 */
 .estimative {
-    max-width: 960px;
+    position: relative;
+    max-width: 425px;
+    min-width: 300px;
+    min-height: 150px;
     margin: auto;
 }
 .estimative h1 {
@@ -283,13 +289,21 @@ button.slick-next {
     max-width: 400px;
 }
 label {
+    display: block;
     font-size: 135%;
     font-family: Euphorigenic;
     font-weight: normal;
     text-align: center;
 }
-.button {
+input {
+    margin: 10px 90px 10px 140px;
+}
+select {
+    margin: 10px;
+}
+button {
     border-radius: 0.5cm;
+    margin: 10px 110px 10px 180px;
 }
 /*
     Divisão do Mapa do Google
