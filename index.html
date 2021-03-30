@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Casa Jabuti - PIPA/RN</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon" />
+</head>
+<body>
+    <main>
+        <header class="header-logo">
+            <nav>
+                <ul>
+                    <li><img src="./img/logo2.png"></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#bedrooms">Suítes & Orçamento</a></li>
+                    <li><a href="#localization">Localização</a></li>
+                    <li><a href="#contact">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-grind">
+            <div id="home" class="space-overslider"></div>
+            <div class="slider">
+                <img src="./img/Foto1.png"/>
+                <img src="./img/Foto2.jpg"/>
+                <img src="./img/Foto3.jpg"/>
+                <img src="./img/Foto4.jpg"/>
+                <img src="./img/Foto5.jpg"/>
+                <img src="./img/Foto6.jpg"/>
+                <img src="./img/Foto7.jpg"/>
+                <img src="./img/Foto8.jpg"/>
+                <img src="./img/Foto9.jpg"/>
+                <img src="./img/Foto10.jpg"/>
+                <img src="./img/Foto11.jpg"/> 
+                <img src="./img/Foto12.jpg"/>
+                <img src="./img/Foto13.png"/>
+            </div>
+            <div id="about" class="space-underslider"></div>
+            <div class="about">
+                <br><br><h1>Sobre</h1>
+                <p>Situada a menos de 1 km da Praia do Amor, a Casa Jabuti oferece piscina ao ar livre sazonal, bar e acomodações com ar-condicionado, varanda térrea e Wi-Fi gratuito.
+                    As unidades dispõem de varanda, TV de tela plana e banheiro privativo com chuveiro.
+                    Neste Cama e Café (B&B), você pode desfrutar de um buffet de café da manhã.
+                    Um terraço pode ser encontrado na Casa Jabuti, juntamente com um jardim.
+                </p>
+                <p>
+                    A Praia do Amor fica a 1,5 km da acomodação, enquanto a Praia das Minas está a 1,7 km da propriedade. O aeroporto mais próximo é o Aeroporto Internacional de São Gonçalo do Amarante, a 64 km da Casa Jabuti.
+                    Casais particularmente gostam da localização — eles deram nota 9,8 para viagem a dois.
+                </p>
+            </div>
+            <div class="about2">
+                <ul>
+                    <li class="swimming">Piscina;</li>
+                    <li class="garden">Jardim;</li>
+                    <li class="parking">Estacionamento gratuito;</li>
+                    <li class="wifi">Wi-Fi gratuito;</li>
+                    <li class="family">Quartos para famílias;</li>
+                    <li id="bedrooms" class="no-smoking">Quartos para não-fumantes;</li>
+                    <li class="pub">Bar.</li>
+                </ul>
+            </div>
+            <div class="bedrooms">
+                <h1>Nossas Suítes</h1>
+                <div class="banners">
+                    <div class="banner1">
+                        <div class="banner-img">
+                            <img src="./img/Hummingbird.jpg" alt="Imagem toda do banner">
+                        </div>
+                        <div class="banner-info">
+                            <h2>Beija-Flor</h2>
+                            <h3>Suíte Padrão</h3>
+                            <p>Tamanho do quarto: 9 m²<br>
+                                Comporta até 2 pessoas<br>
+                                Vista para o Jardim<br>
+                                Vista para a Piscina<br>
+                                Cama de casal Queen Size<br>
+                                Ar-condicionado/TV/Frigobar<br>
+                                Café-da-manhã não está incluso<br></p>
+                        </div>
+                    </div>
+                    <div class="banner2">
+                        <div class="banner-img">
+                            <img src="./img/Turtle.jpg" alt="Imagem toda do banner">
+                        </div>
+                        <div class="banner-info">
+                            <h2>Tartaruga</h2>
+                            <h3>Suíte Familiar Deluxe</h3>
+                            <p>Tamanho do quarto: 28 m²<br>
+                               Comporta até 4 pessoas<br>
+                               Vista para o Jardim<br>
+                               Cama de casal King Size e beliche<br>
+                               Ar-condicionado/TV/Frigobar<br>
+                               Café-da-manhã está incluso<br></p>
+                        </div>
+                    </div>
+                    <div class="banner3">
+                        <div class="banner-img">
+                            <img src="./img/Macaw.jpg" alt="Imagem toda do banner">
+                        </div>
+                        <div class="banner-info">
+                            <h2>Arara</h2>
+                            <h3>Suíte Deluxe</h3>
+                            <p>Tamanho do quarto: 13 m²<br>
+                                Comporta até 2 pessoas<br>
+                                Vista para o Jardim<br>
+                                Cama de casal Queen Size<br>
+                                Ar-condicionado/TV/Frigobar<br>
+                                Café-da-manhã está incluso<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="estimative">
+                <form>
+                    <h1>Orçamento</h1>
+                    <label class="check-in">Check-in:</label>
+                    <input type="date" id="checkin" required>
+                    <label class="check-out">Check-out:</label>
+                    <input type="date" id="checkout" required>
+                    <label>Suítes:</label>
+                    <select id="bedroom" required>
+                        <option value="153">Beija-Flor - Suíte Padrão (R$153/diária - 1 pessoa)</option>
+                        <option value="180">Beija-Flor - Suíte Padrão (R$180/diária - 2 pessoas)</option>
+                        <option value="153">Arara - Suíte Deluxe (R$153/diária - 1 pessoa)</option>
+                        <option value="180">Arara - Suíte Deluxe (R$180/diária - 2 pessoas)</option>
+                        <option value="384">Tartaruga - Suite Familiar Deluxe (R$384/diária - até 2 pessoas)</option>
+                        <option value="456">Tartaruga - Suite Familiar Deluxe (R$456/diária - 3 pessoas)</option>
+                        <option value="480">Tartaruga - Suite Familiar Deluxe (R$480/diária - 4 pessoas)</option>
+                    </select>
+                    <button class="button" type="submit" onclick="check()">Calcular</button>
+                </form>
+            </div>
+            <div id="localization" class="border-overmap">
+            </div>
+            <div class="localization"><h1>Localização</h1></div>
+            <div id="map" class="map"></div>
+            <div class="slogan">
+                <h1><strong>Casa Jabuti</strong></h1>
+                <h2>Nós falamos a sua língua!</h2>
+            </div>
+            <footer>
+                <div class="footer">
+                    <div id="contact" class="Contact">
+                        <h1>Contatos</h1>
+                    </div>
+                    <ul>
+                        <li><a><img src="./img/WhatsApp.png"></a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/casajabuti.pipa/"><img src="./img/Instagram.png"></a></li>
+                        <li class="booking"><a href="https://www.booking.com/hotel/br/casa-jabuti-tibau-do-sul.pt-br.html"><img src="./img/Booking.png"></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <!--
+        CDN para o funcionamento do carrossel de imagens Slick Slider, localização pelo Google Maps e
+        scripts no arquivo javascript/
+    -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBen6SOLU_rX3t5-XGFvSJIvI7beP9ji3k&callback=initMap&libraries=&v=weekly"
+    type="text/javascript"></script>
+</body>
+</html>
