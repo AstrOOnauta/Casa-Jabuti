@@ -341,7 +341,7 @@ nav a:hover{
     filter: drop-shadow(0 0 5px #000);
 }
 .banner-info ul li{
-    margin: .8rem -8%;
+    margin: .8rem 0;
     font-size: 1.4rem;
     line-height: 2rem;
     color: rgba(255, 255, 255, 0.8);
@@ -518,7 +518,7 @@ footer i:hover{
         font-size: large;
     }
     .banner-info ul li{
-        margin: .2rem -15%;
+        margin: .2rem 0;
         font-size: medium;
         line-height: 1.4rem;
     }
