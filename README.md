@@ -1,4 +1,4 @@
-# Casa-Jabuti
+# Casa Jabuti - Pipa/RN
 Meu primeiro projeto como desenvolvedor web!! Projeto Solo!!
 Contêm HTML5 + CSS3 + JavaScript!!!
 

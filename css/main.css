@@ -1,22 +1,535 @@
-body {
-    margin: 0 0 0 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 /*
     Estilização da div principal e aplicação da animação do degradê de fundo/
 
 */
-.main-grind {
-    z-index: 1;
-    position: absolute;
+main {
+    position: relative;
     color: black;
     background: linear-gradient(90deg, #69bd71,  #23D5AB, #23D5AB, #23A6D5);
-    background-size: 400% 400%;
     width: 100%;
-    min-width: 750px;
-    padding: 0;
-    margin: 0;
     animation: change 15s ease-in-out infinite;
 }
+
+#toTopButton{
+    display: none;
+    position: fixed;
+    background-color: transparent;
+    bottom: 2rem;
+    right: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#toTopButton:hover {
+    outline: none;
+}
+
+#toTopButton i{
+    font-size: 6rem;
+    color: #fff;
+}
+
+#toTopButton i:hover {
+    transition: .2s;
+    color: #fbb034;
+    outline: none;
+}
+
+/*
+    Estilização do cabeçalho, o qual foi mantido fixo durante a rolagem
+    e contém logo e barra de navegação/
+    
+*/
+.header{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+nav {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+nav a{
+    padding: 1rem;
+    flex-grow: 1;
+    text-decoration: none;
+    color: #fff;
+    font-size: xx-large;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+nav a:hover{
+    color: #fbb034;
+    filter: none;
+}
+/*
+    Ajuste e personalização do Carrosel de imagens/
+
+*/
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider img{
+    object-fit: cover;
+    height: 100vh;
+}
+
+
+.slick-prev {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 6.4%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px #000);
+    z-index: 2;
+    height: 100vh;
+    width: 10%;
+}
+
+.slick-next {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: 6.4%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px #000);
+    z-index: 2;
+    height: 100vh;
+    width: 10%;
+}
+
+.slick-prev:hover, .slick-next:hover{
+    transition: .5s;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*
+    Estilização do Hero
+*/
+.hero {
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    color: #fff;
+    filter: drop-shadow(0 0 5px #000);
+}
+.hero div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hero h1, .hero p{
+    margin: 0;
+    padding: 0;
+}
+
+.hero h1{
+    font-size: 8.5rem;
+    font-weight: 800;
+    letter-spacing: -.4rem;
+    line-height: 6.5rem;
+}
+
+.hero p{
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+/*
+    Estilização da consulta de orçamento do site/
+
+*/
+.budget {
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+}
+
+.budget form{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.budget input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    max-width: 100%;
+    padding: .6rem 1rem;
+    margin: 1rem .5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.budget select {
+    flex-grow: 2;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    max-width: 100%;
+    padding: .6rem 1rem;
+    margin: 1rem .5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.budget button{
+    cursor: pointer;
+    background-color: #fbb034;
+    color: #fff;
+    border: none;
+    padding: .6rem 1rem;
+    margin: 1rem .5rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.budget input::placeholder{
+    color: #000;
+}
+
+.budget input:focus, .budget select:focus{
+    transition: .2s;
+    border-bottom: 2px solid #fbb034;
+}
+
+.budget input:focus, .budget select:focus, .budget-button:focus{
+    outline: none;
+}
+
+/*
+    Personalização da divisão Sobre a Casa Jabuti/
+
+*/
+.about {
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0 0 0;
+}
+
+.about h1 {
+    font-size: xx-large;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.about p {
+    font-size: xx-large;
+    text-align: justify;
+    text-indent: 4rem;
+    line-height: 3rem;
+}
+.about div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.about ul{
+    flex-grow: 1;
+    margin: auto;
+    padding-left: 6rem;
+}
+
+.about li {
+    font-size: 2.75rem;
+    line-height: 4.5rem;
+    list-style: none;
+}
+/*
+    Estilização das cartas de informação das suítes da Casa Jabuti
+
+*/
+
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.bedrooms h1 {
+    font-size: xx-large;
+    padding: 2rem 0 0 0;
+    margin: auto;
+    text-align: center;
+}
+
+.banner{
+    position: relative;
+    margin: 4rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.8);
+}
+
+.banner-img{
+    background-color:black;
+    border-radius: 1rem;
+}
+.banner-img img{
+    object-fit: cover;
+    height: 50vh;
+    border-radius: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.banner-info{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+    padding: 10%;
+    width: 80%;
+    animation: all 0.5s;
+}
+
+.banner-info h2{
+    color: #fbb034;
+    font-size: 3rem;
+    font-weight: 900;
+    filter: drop-shadow(0 0 5px #000);
+}
+.banner-info h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    filter: drop-shadow(0 0 5px #000);
+}
+.banner-info ul li{
+    margin: .8rem -8%;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 0 5px #000);
+}
+.banner:hover .banner-img img{
+    opacity: 0.6;
+}
+.banner:hover .banner-info{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+    Divisão do Mapa do Google
+    Google Maps's Division
+*/
+#map {
+    width: 75%;
+    height: 40vh;
+    margin: 4rem auto;
+    border-radius: .4rem;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+/*
+    Rodapé com contatos/
+*/
+footer {
+    position: relative;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1594225513799-a9f646521469?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1531&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5vh 0 10rem 0;
+}
+
+footer form{
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    padding: 1rem 2rem;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+footer h2 {
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer input{
+    border: none;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    font-size: 1.4rem;
+}
+
+footer textarea{
+    border: none;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+}
+
+footer button{
+    cursor: pointer;
+    background-color: #fbb034;
+    border: none;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    font-size: 1.4rem;
+}
+
+footer input:focus, footer textarea:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer button:focus{
+    outline: none;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 28%;
+    margin: auto;
+    padding: 1rem 0 2rem 0;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+.slogan {
+    padding: 5vh;
+    margin: auto;
+    width: 50%;
+    filter: drop-shadow(0 0 5px #000);
+}
+.slogan h1 {
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 450%;
+    font-weight: 900;
+    line-height: 4.5rem;
+    padding: 2.5rem 1rem;
+    margin: 0;
+    text-align: center;
+    width: 250px;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+footer i{
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+footer i:hover{
+    color: #fbb034;
+}
+
+.AstrOOnauta{
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: large;
+}
+
+.AstrOOnauta a{
+    text-decoration: none;
+    color: #fbb034;
+}
+
+@media screen and (min-width: 1100px){
+    #toTopButton i{
+        font-size: 3rem;
+    }
+    nav{
+        width: 75%;
+    }
+    nav a{
+        font-size: large;
+    }
+    .budget input, .budget select, .budget button{
+        font-size: 1rem;
+    }
+    .about p{
+        font-size: large;
+        line-height: 1.8rem;
+    }
+    .about li{
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+
+    .banner-img img {
+        height: 75vh;
+    }
+    .banner-info h2{
+        font-size: xx-large;
+    }
+    .banner-info h3{
+        font-size: large;
+    }
+    .banner-info ul li{
+        margin: .2rem -15%;
+        font-size: medium;
+        line-height: 1.4rem;
+    }
+    #map {
+        height: 80vh;
+    }
+    footer input, footer textarea, footer button{
+        font-size: 1rem;
+    }
+}
+
 @keyframes change {
     0% {
         background-position: 0 100%;
@@ -27,383 +540,4 @@ body {
     100% {
         background-position: 0 100%;
     }
-}
-/*
-    Estilização do cabeçalho, o qual foi mantido fixo durante a rolagem
-    e contém logo e barra de navegação/
-    
-*/
-.header-logo {
-    background-color:black;
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    z-index: 12;
-}
-.header-logo img {
-    max-width:210px;
-    position: relative;
-}
-nav {
-    background-color: black;
-    min-height: 30px;
-    border-bottom: 3px solid white;
-    position: fixed;
-    width: 100%;
-    z-index: 13;
-}
-nav ul li {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 8px;
-    margin-right: 45px;
-    font-size: 90%;
-}
-nav ul li a:hover {
-    border-bottom: 3px white solid;
-}
-nav ul li a {
-    width: 100%;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-nav ul {
-    padding: 0;
-    max-width: 965px;
-    margin: auto;
-}
-/*
-    Ajuste e personalização do Carrosel de imagens/
-
-*/
-.space-overslider {
-    min-height: 105px;
-}
-.slider {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 200px;
-    border-bottom: 3px solid white;
-}
-button.slick-prev { 
-    width: 52px;
-    height: 52px;
-    font-size: 0px;
-    border: none;
-    background-color: transparent;
-    background-image: url('../img/LeftArrow.png');
-    position: absolute;
-    left: 0px;
-    z-index: 9;
-    top: 50%;
-}
-button.slick-next {
-    width: 52px;
-    height: 52px;
-    font-size: 0px;
-    border: none;
-    background-color: transparent;
-    background-image: url('../img/RightArrow.png');
-    position: absolute;
-    right: 0px;
-    z-index: 10;
-    top: 50%;
-}
-/*
-    Personalização da divisão Sobre a Casa Jabuti/
-
-*/
-.space-underslider {
-    height: 70px;
-    margin-right: 200px;
-    margin-left: 200px;
-    min-width: 200px;
-    border-bottom: 3px black solid;
-}
-.about {
-    padding-bottom: 20px;
-}
-.about h1 {
-    font-family: Euphorigenic;
-    font-size: 200%;
-    font-weight: normal;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 400px;
-}
-.about p {
-    font-size: 120%;
-    text-align: justify;
-    text-indent: 1.5cm;
-    margin-left: 200px;
-    margin-right: 200px;
-    min-width: 300px;
-}
-.about2 {
-    margin-left: 200px;
-    margin-right: 200px;
-    min-width: 300px;
-    border-bottom: solid 3px black;
-    padding-bottom: 25px;
-}
-.about2 h1 {
-    font-family: Euphorigenic;
-    font-size: 200%;
-    font-weight: normal;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 400px;
-}
-.about2 ul li {
-    max-width: 270px;
-    min-width: 270px;
-    font-size: 120%;
-    margin: 0 auto;
-}
-.swimming {
-    list-style-image: url(../img/Swimming.png);
-}
-.garden {
-    list-style-image: url(../img/Garden.png);
-}
-.parking {
-    list-style-image: url(../img/Parking.png);
-}
-.wifi {
-    list-style-image: url(../img/WiFi.png);
-}
-.family {
-    list-style-image: url(../img/Family.png);
-}
-.no-smoking {
-    list-style-image: url(../img/No-Smoking.png);
-}
-.pub {
-    list-style-image: url(../img/Pub.png);
-}
-/*
-    Estilização das cartas de informação das suítes da Casa Jabuti
-
-*/
-.banners {
-    position: relative;
-    min-width: 300px;
-    max-width: 950px;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-.banner-img {
-    background-color:black;
-    border-radius: 0.5cm;
-}
-.banner-img img {
-    object-fit: cover;
-    border-radius: 0.5cm;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-.banner-info {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    bottom: 0;
-    padding: 0.2cm;
-    text-shadow: 0.3cm 0.2cm 0.3cm rgba(0, 0, 0, 0.4);
-    animation: all 0.3s;
-}
-.bedrooms h1 {
-    font-family: Euphorigenic;
-    font-size: 200%;
-    font-weight: normal;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 400px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.banner-info h2 {
-    color: #69bd71;
-    font-size: 50px;
-    font-family: Michella Garden;
-    font-weight: 100;
-}
-.banner-info h3 {
-    color: white;
-    font-size: 25px;
-    font-family: Euphorigenic;
-    font-weight: bolder;
-    padding: 0;
-    margin: 0;
-}
-.banner-info p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    color: white;
-    font-size: 90%;
-}
-.banner1:hover .banner-info {
-    bottom: 0.5cm;
-    opacity: 1;
-    visibility: visible;
-}
-.banner2:hover .banner-info {
-    bottom: 0.5cm;
-    opacity: 1;
-    visibility: visible;
-}
-.banner3:hover .banner-info {
-    bottom: 0.5cm;
-    opacity: 1;
-    visibility: visible;
-}
-.banner1:hover .banner-img img {
-    opacity: 0.6;
-}
-.banner2:hover .banner-img img {
-    opacity: 0.6;
-}
-.banner3:hover .banner-img img {
-    opacity: 0.6;
-}
-/*
-    Estilização da consulta de orçamento do site/
-
-*/
-.estimative {
-    position: relative;
-    max-width: 425px;
-    min-width: 300px;
-    min-height: 150px;
-    margin: auto;
-}
-.estimative h1 {
-    padding-top: 60px;
-    padding-bottom: 40px;
-    margin: auto;
-    font-size: 175%;
-    font-family: Euphorigenic;
-    font-weight: normal;
-    text-align: center;
-    max-width: 400px;
-}
-label {
-    display: block;
-    font-size: 135%;
-    font-family: Euphorigenic;
-    font-weight: normal;
-    text-align: center;
-}
-input {
-    margin: 10px 90px 10px 140px;
-}
-select {
-    margin: 10px;
-}
-.button-estimative {
-    border-radius: 0.5cm;
-    margin: 10px 110px 10px 180px;
-}
-/*
-    Divisão do Mapa do Google
-    Google Maps's Division
-*/
-.border-overmap {
-    height: 50px;
-    border-bottom: solid 3px black;
-    margin-left: 200px;
-    margin-right: 200px;
-    min-width: 250px;
-}
-#location-map{
-    background: #fff;
-    border: none;
-    height: 540px;
-    width: 100%;
-
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-.localization h1 {
-    padding-top: 60px;
-    margin: auto;
-    font-size: 200%;
-    font-family: Euphorigenic;
-    font-weight: normal;
-    text-align: center;
-    max-width: 400px;
-}
-#map {
-    height: 415px;
-    margin: auto;
-    width: 70%;
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-/*
-    Slogan da Casa Jabuti/
-    Jabuti House's slogan
-*/
-.slogan {
-    border-top: solid 3px black;
-    margin-left: 200px;
-    margin-right: 200px;
-    min-width: 250px;
-}
-.slogan h1 {
-    font-family: Euphorigenic;
-    border: 3px solid black;
-    font-size: 500%;
-    margin: auto;
-    margin-top: 50px;
-    padding: 20px 10px 20px 10px;
-    text-align: center;
-    min-width: 250px;
-    max-width: 250px;
-}
-.slogan h2 {
-    min-width: 200px;
-    text-align: center;
-}
-/*
-    Rodapé com contatos/
-*/
-footer {
-    border-top: 3px solid white;
-    position: absolute;
-    background-color:black;
-    min-height: 150px;
-    width: 100%;
-}
-footer h1 {
-    color: white;
-    margin-left: 200px;
-    margin-right: 200px;
-    min-width: 200px;
-    text-align: center;
-}
-footer ul li {
-    display: inline-block;
-}
-footer ul li a img:hover {
-    opacity: 10%;
-}
-footer ul li img {
-    height: 10%;
-}
-footer ul{
-    max-width: 610px;
-    padding: 0%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.instagram {
-    margin-left: 90px;
-}
-.booking {
-    margin-left: 90px;
 }
